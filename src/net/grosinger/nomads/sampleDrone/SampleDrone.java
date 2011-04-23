@@ -1,20 +1,46 @@
 package net.grosinger.nomads.sampleDrone;
 
 import net.grosinger.nomads.Drone;
+import net.grosinger.nomads.DroneListItem.EnumMove;
+import net.grosinger.nomads.DroneTools;
 
-public class SampleDrone extends Drone {
+public class SampleDrone implements Drone {
 
+	// You can change this if you want
 	private static final boolean DEBUGGINGALL = true;
 
-	/*
-	 * Override the move method. This is your main way of doing anything
-	 */
+	// Define any variables that you need
+	private DroneTools tools;
+	private String name;
+
+	// Leave these methods alone, they are required //
+
 	@Override
-	public void move() {
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public void setName(String newName) {
+		name = newName;
+	}
+
+	@Override
+	public void setDroneTools(DroneTools newTools) {
+		tools = newTools;
+	}
+
+	// Edit from here down //
+
+	@Override
+	public EnumMove move() {
 		if (DEBUGGINGALL)
 			System.out.println("SampleDrone initiating move...");
-
-		if (DEBUGGINGALL)
-			System.out.println("SampleDrone finished move");
+		if (tools.canMoveEast())
+			return EnumMove.East;
+		else if (tools.canMoveSouth())
+			return EnumMove.South;
+		else
+			return EnumMove.NoMove;
 	}
 }

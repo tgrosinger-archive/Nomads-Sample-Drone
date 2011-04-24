@@ -9,9 +9,12 @@ public class SampleDrone implements Drone {
 	// You can change this if you want
 	private static final boolean DEBUGGINGALL = true;
 
+	//Do not change these
+	private String name;
+	private String UID;
+	
 	// Define any variables that you need
 	private DroneTools tools;
-	private String name;
 
 	// Leave these methods alone, they are required //
 
@@ -24,7 +27,17 @@ public class SampleDrone implements Drone {
 	public void setName(String newName) {
 		name = newName;
 	}
-
+	
+	@Override
+	public void setUID(String newUID) {
+		UID = newUID;
+	}
+	
+	@Override
+	public String getUID() {
+		return UID;
+	}
+	
 	@Override
 	public void setDroneTools(DroneTools newTools) {
 		tools = newTools;
@@ -44,6 +57,9 @@ public class SampleDrone implements Drone {
 				System.out.println("I am not in a safe zone");
 			}
 		}
+		
+		tools.checkRadar();
+		
 		if (tools.canMoveEast())
 			return EnumMove.East;
 		else if (tools.canMoveSouth())

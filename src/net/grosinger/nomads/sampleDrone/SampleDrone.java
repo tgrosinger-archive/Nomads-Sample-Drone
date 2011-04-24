@@ -34,8 +34,16 @@ public class SampleDrone implements Drone {
 
 	@Override
 	public EnumMove move() {
-		if (DEBUGGINGALL)
+		if (DEBUGGINGALL){
 			System.out.println("SampleDrone initiating move...");
+			System.out.println("Current X = " + tools.getX());
+			System.out.println("Current Y = " + tools.getY());
+			if(tools.inSafeZone()){
+				System.out.println("I am in a safe zone");
+			}else{
+				System.out.println("I am not in a safe zone");
+			}
+		}
 		if (tools.canMoveEast())
 			return EnumMove.East;
 		else if (tools.canMoveSouth())

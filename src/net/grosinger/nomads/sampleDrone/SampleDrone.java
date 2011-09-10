@@ -3,6 +3,8 @@ package net.grosinger.nomads.sampleDrone;
 import net.grosinger.nomads.Drone;
 import net.grosinger.nomads.DroneListItem.EnumMove;
 import net.grosinger.nomads.DroneTools;
+import net.grosinger.nomads.Neighbor;
+import net.grosinger.nomads.Upgrade;
 
 public class SampleDrone implements Drone {
 
@@ -66,5 +68,23 @@ public class SampleDrone implements Drone {
 			return EnumMove.South;
 		else
 			return EnumMove.NoMove;
+	}
+
+	@Override
+	public Neighbor steal() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Neighbor attack() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Upgrade upgrade() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

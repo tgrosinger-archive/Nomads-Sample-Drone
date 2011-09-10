@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/tgrosinger/Dropbox/Programming/Java/Nomads-Sample-Drone/Nomads.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tgrosinger/Documents/Java/Nomads-Sample-Drone/Nomads.jar" sourcepath="/nomads"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

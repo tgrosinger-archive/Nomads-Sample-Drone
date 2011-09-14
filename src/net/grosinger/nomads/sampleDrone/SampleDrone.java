@@ -78,9 +78,4 @@ public class SampleDrone implements Drone {
 	public NeighborDrone attack() {
 		return null;
 	}
-
-	@Override
-	public Upgrade upgrade() {
-		return null;
-	}
 }

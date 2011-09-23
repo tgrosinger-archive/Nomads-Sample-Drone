@@ -1,10 +1,9 @@
 package net.grosinger.nomads.sampleDrone;
 
-import net.grosinger.nomads.Drone;
-import net.grosinger.nomads.DroneListItem.EnumMove;
+import net.grosinger.nomads.drones.Drone;
+import net.grosinger.nomads.drones.DroneListItem.EnumMove;
 import net.grosinger.nomads.DroneTools;
-import net.grosinger.nomads.NeighborDrone;
-import net.grosinger.nomads.Upgrade;
+import net.grosinger.nomads.drones.NeighborDrone;
 
 public class SampleDrone implements Drone {
 
